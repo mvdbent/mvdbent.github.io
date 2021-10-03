@@ -9,7 +9,6 @@
     <description>Recent content on Appletalk IT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Sep 1986 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -35,25 +34,6 @@
     </item>
     
     <item>
-      <title>Hello Friend</title>
-      <link>/post/hello/</link>
-      <pubDate>Wed, 17 Sep 1986 00:00:00 +0000</pubDate>
-      
-      <guid>/post/hello/</guid>
-      <description>
-        
-          &lt;img src=&#34;/img/Hello-large-color_2x.png&#34;/&gt;
-          
-        
-        
-        
-          &#34;Hello, friend?&#34; That&#39;s lame. Maybe I should give you a name?
-          
-        
-        </description>
-    </item>
-    
-    <item>
       <title>About</title>
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -67,9 +47,11 @@
         
         
         
-          Hi there My name is Mischa van der Bent and I&amp;rsquo;m the author of this Blog. I made it to my experience while solving challenges.
+          Hi there,
+My name is Mischa van der Bent and I&amp;rsquo;m the author of this Blog. I made it to my experience while solving challenges.
 We all know how hard is to start something on the web, especially these days. You need to prepare a bunch of stuff, configure them and when that’s done — create the content.
-This theme is pretty basic and covers all of the essentials. All you have to do is start typing!
+and if you want to support me:
+So, there you have it&amp;hellip; enjoy!
           
         
         </description>
@@ -90,6 +72,25 @@ This theme is pretty basic and covers all of the essentials. All you have to do 
         
         
           
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Hello, ..</title>
+      <link>/post/hello/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/hello/</guid>
+      <description>
+        
+          &lt;img src=&#34;/img/Hello-large-color_2x.png&#34;/&gt;
+          
+        
+        
+        
+          &#34;Hello, ..
           
         
         </description>
