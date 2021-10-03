@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>macOS on AppleShare IT</title>
+    <link>/tags/macos/</link>
+    <description>Recent content in macOS on AppleShare IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>mvdbent</copyright>
+    <lastBuildDate>Sun, 03 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CIS-Script</title>
+      <link>/posts/2021/10/cis-script/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2021/10/cis-script/</guid>
+      <description>This blog is about the CIS-Script
+#!/bin/zsh  export PATH=/usr/bin:/bin:/usr/sbin:/sbin #################################################################################################### #################################################################################################### # DESCRIPTION # This will upload CIS Benchmark Scoring CSV to the computer record #################################################################################################### #################################################################################################### if [ &amp;#34;$4&amp;#34; != &amp;#34;&amp;#34; ] &amp;amp;&amp;amp; [ &amp;#34;$basic_auth&amp;#34; == &amp;#34;&amp;#34; ]; then basic_auth=$4 else echo &amp;#34;basic_auth is unset, please insert base64-encoded credentials within Parameter 4 in Jamf Pro&amp;#34; exit 1 fi should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png Change your submodule to point to map gh-pages to public instead of _site (recommended).</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>/posts/2020/12/getting-started-with-hugo/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/12/getting-started-with-hugo/</guid>
+      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at Install Hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+  </channel>
+</rss>

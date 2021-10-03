@@ -1,99 +1,78 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Appletalk IT</title>
-    
-    
-    
+    <title>AppleShare IT</title>
     <link>/</link>
-    <description>Recent content on Appletalk IT</description>
+    <description>Recent content on AppleShare IT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
+    <copyright>mvdbent</copyright>
+    <lastBuildDate>Sun, 03 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating a New Theme</title>
+      <link>/posts/2020/09/creating-a-new-theme/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/09/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
     
     <item>
-      <title>Showcase</title>
-      <link>/showcase/</link>
-      <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>/posts/2019/03/migrate-to-hugo-from-jekyll/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/showcase/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          Header 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum metus. Aenean rutrum ligula sodales ex auctor, sed tempus dui mollis. Curabitur ipsum dui, aliquet nec commodo at, tristique eget ante. Donec quis dolor nec nunc mollis interdum vel in purus. Sed vitae leo scelerisque, sollicitudin elit sed, congue ante. In augue nisl, vestibulum commodo est a, tristique porttitor est. Proin laoreet iaculis ornare. Nullam ut neque quam.
-          
-        
-        </description>
+      <guid>/posts/2019/03/migrate-to-hugo-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
     </item>
     
     <item>
       <title>About</title>
       <link>/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          Hi there,
-My name is Mischa van der Bent and I&amp;rsquo;m the author of this Blog. I made it to my experience while solving challenges.
-We all know how hard is to start something on the web, especially these days. You need to prepare a bunch of stuff, configure them and when that’s done — create the content.
-and if you want to support me:
-So, there you have it&amp;hellip; enjoy!
-          
-        
-        </description>
+      <description>Hi there,
+My name is Mischa van der Bent and I&amp;rsquo;m the author of this Blog. This is my personal blog and mainly write about sharing my experience with Apple IT related matters and share what I think is interesting to share.
+ Disclaimer: all posts, opinions, suggestions, remarks, information or statements of any kind, are my own. My current employee Jamf, or any other 3rd party mentioned in, or linked to, any part of this blog, can never be held responsible for the information on this website.</description>
     </item>
     
     <item>
-      <title>Archive</title>
-      <link>/archive/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>CIS-Script</title>
+      <link>/posts/2021/10/cis-script/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>/archive/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          
-          
-        
-        </description>
+      <guid>/posts/2021/10/cis-script/</guid>
+      <description>This blog is about the CIS-Script
+#!/bin/zsh  export PATH=/usr/bin:/bin:/usr/sbin:/sbin #################################################################################################### #################################################################################################### # DESCRIPTION # This will upload CIS Benchmark Scoring CSV to the computer record #################################################################################################### #################################################################################################### if [ &amp;#34;$4&amp;#34; != &amp;#34;&amp;#34; ] &amp;amp;&amp;amp; [ &amp;#34;$basic_auth&amp;#34; == &amp;#34;&amp;#34; ]; then basic_auth=$4 else echo &amp;#34;basic_auth is unset, please insert base64-encoded credentials within Parameter 4 in Jamf Pro&amp;#34; exit 1 fi should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png Change your submodule to point to map gh-pages to public instead of _site (recommended).</description>
     </item>
     
     <item>
-      <title>Hello, ..</title>
-      <link>/post/hello/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Getting Started with Hugo</title>
+      <link>/posts/2020/12/getting-started-with-hugo/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/hello/</guid>
-      <description>
-        
-          &lt;img src=&#34;/img/Hello-large-color_2x.png&#34;/&gt;
-          
-        
-        
-        
-          &#34;Hello, ..
-          
-        
-        </description>
+      <guid>/posts/2020/12/getting-started-with-hugo/</guid>
+      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at Install Hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>/posts/2020/04/hugo-template-primer/</link>
+      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/04/hugo-template-primer/</guid>
+      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.</description>
     </item>
     
   </channel>

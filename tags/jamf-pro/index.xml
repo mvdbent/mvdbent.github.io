@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jamf Pro on AppleShare IT</title>
+    <link>/tags/jamf-pro/</link>
+    <description>Recent content in Jamf Pro on AppleShare IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>mvdbent</copyright>
+    <lastBuildDate>Sun, 03 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/jamf-pro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CIS-Script</title>
+      <link>/posts/2021/10/cis-script/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2021/10/cis-script/</guid>
+      <description>This blog is about the CIS-Script
+#!/bin/zsh  export PATH=/usr/bin:/bin:/usr/sbin:/sbin #################################################################################################### #################################################################################################### # DESCRIPTION # This will upload CIS Benchmark Scoring CSV to the computer record #################################################################################################### #################################################################################################### if [ &amp;#34;$4&amp;#34; != &amp;#34;&amp;#34; ] &amp;amp;&amp;amp; [ &amp;#34;$basic_auth&amp;#34; == &amp;#34;&amp;#34; ]; then basic_auth=$4 else echo &amp;#34;basic_auth is unset, please insert base64-encoded credentials within Parameter 4 in Jamf Pro&amp;#34; exit 1 fi should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png Change your submodule to point to map gh-pages to public instead of _site (recommended).</description>
+    </item>
+    
+  </channel>
+</rss>
