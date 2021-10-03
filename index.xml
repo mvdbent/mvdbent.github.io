@@ -30,14 +30,14 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
-      <title>About</title>
+      <title>About the Author</title>
       <link>/about/</link>
       <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
       <description>Hi there,
-My name is Mischa van der Bent and I&amp;rsquo;m the author of this Blog. This is my personal blog and mainly write about sharing my experience with Apple IT related matters and share what I think is interesting to share.
- Disclaimer: all posts, opinions, suggestions, remarks, information or statements of any kind, are my own. My current employee Jamf, or any other 3rd party mentioned in, or linked to, any part of this blog, can never be held responsible for the information on this website.</description>
+My name is Mischa van der Bent and this is my personal blog and mainly write about sharing my experience with Apple IT related matters and share what I think is interesting to share.
+ Disclaimer: all posts, opinions, suggestions, remarks, information or statements of any kind, are my own. My current employer Jamf, or any other 3rd party mentioned in, or linked to, any part of this blog, can never be held responsible for the information on this website.</description>
     </item>
     
     <item>
