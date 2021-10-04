@@ -9,27 +9,6 @@
     <copyright>mvdbent</copyright>
     <lastBuildDate>Sun, 03 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Creating a New Theme</title>
-      <link>/posts/2020/09/creating-a-new-theme/</link>
-      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/2020/09/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>/posts/2019/03/migrate-to-hugo-from-jekyll/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/2019/03/migrate-to-hugo-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
-    </item>
-    
-    <item>
       <title>About the Author</title>
       <link>/about/</link>
       <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
@@ -52,27 +31,42 @@ My name is Mischa van der Bent and this is my personal blog and mainly write abo
     </item>
     
     <item>
-      <title>Getting Started with Hugo</title>
-      <link>/posts/2020/12/getting-started-with-hugo/</link>
-      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      <title>EraseInstall application retired</title>
+      <link>/posts/2021/03/eraseinstall-application-retired/</link>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2020/12/getting-started-with-hugo/</guid>
-      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+      <guid>/posts/2021/03/eraseinstall-application-retired/</guid>
+      <description>It makes me very sad that the EraseInstall application has been retired.
+We built this tool three years ago, mostly because we wanted to learn how to build an app like this on macOS. We think it worked out well. We learned a lot, and are glad the application was useful to some.
+Since then, all the people involved in the EraseInstall Project have moved on to other jobs or other responsibilities.</description>
     </item>
     
     <item>
-      <title>(Hu)go Template Primer</title>
-      <link>/posts/2020/04/hugo-template-primer/</link>
-      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
+      <title>onAirScanner</title>
+      <link>/posts/2020/10/onairscanner/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2020/04/hugo-template-primer/</guid>
-      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
-This document is a brief primer on using Go templates.</description>
+      <guid>/posts/2020/10/onairscanner/</guid>
+      <description>SOURCE onAirScanner - GitHub While working from home, we all have a lot of meetings, and sometimes a family member or a roommate has no idea that you are in a meeting and they walk into the room without even a knock. Setting up a light to show when you are &amp;ldquo;ON AIR&amp;rdquo; or in a meeting is a great solution. There are several solutions out on the internet that can do this.</description>
+    </item>
+    
+    <item>
+      <title>Off-boarding in a Modern Deployment | JNUC 2019</title>
+      <link>/posts/2019/11/off-boarding-in-a-modern-deployment-jnuc-2019/</link>
+      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2019/11/off-boarding-in-a-modern-deployment-jnuc-2019/</guid>
+      <description>Imaging is dead. Secure Boot and the T2 system controller have changed the toolset available to Mac administrators. The new post-imaging world of Mojave requires new workflows. We learn about the role that &amp;lsquo;off-boarding&amp;rsquo; or the erase/install step has in the modern macOS deployment cycle. In this session, we will explore the startosinstall command in detail and learn about its uses and limitations. Finally, we will introduce a few workflows and tools (Erase&amp;amp;Install.</description>
+    </item>
+    
+    <item>
+      <title>Automation Panel | JNUC 2018</title>
+      <link>/posts/2018/10/automation-panel-jnuc-2018/</link>
+      <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2018/10/automation-panel-jnuc-2018/</guid>
+      <description>In this JNUC session, we talk through some of the details of automating various components of your Apple environment.
+How to automate your &amp;ldquo;favorite&amp;rdquo; workflows. Let’s face it — one of the main reasons many people come to the Jamf Nation User Conference (JNUC) is to automate the crap out of their environment and have it run like a well-oiled machine. In this panel, we talk through some of the details of automating various components of your Apple environment, including Jamf.</description>
     </item>
     
   </channel>

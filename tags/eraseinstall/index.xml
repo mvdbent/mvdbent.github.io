@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>eraseinstall on AppleShare IT</title>
+    <link>/tags/eraseinstall/</link>
+    <description>Recent content in eraseinstall on AppleShare IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>mvdbent</copyright>
+    <lastBuildDate>Wed, 17 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/eraseinstall/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EraseInstall application retired</title>
+      <link>/posts/2021/03/eraseinstall-application-retired/</link>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2021/03/eraseinstall-application-retired/</guid>
+      <description>It makes me very sad that the EraseInstall application has been retired.
+We built this tool three years ago, mostly because we wanted to learn how to build an app like this on macOS. We think it worked out well. We learned a lot, and are glad the application was useful to some.
+Since then, all the people involved in the EraseInstall Project have moved on to other jobs or other responsibilities.</description>
+    </item>
+    
+    <item>
+      <title>Off-boarding in a Modern Deployment | JNUC 2019</title>
+      <link>/posts/2019/11/off-boarding-in-a-modern-deployment-jnuc-2019/</link>
+      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2019/11/off-boarding-in-a-modern-deployment-jnuc-2019/</guid>
+      <description>Imaging is dead. Secure Boot and the T2 system controller have changed the toolset available to Mac administrators. The new post-imaging world of Mojave requires new workflows. We learn about the role that &amp;lsquo;off-boarding&amp;rsquo; or the erase/install step has in the modern macOS deployment cycle. In this session, we will explore the startosinstall command in detail and learn about its uses and limitations. Finally, we will introduce a few workflows and tools (Erase&amp;amp;Install.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,29 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>mvdbent</copyright>
-    <lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/development/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Getting Started with Hugo</title>
-      <link>/posts/2020/12/getting-started-with-hugo/</link>
-      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      <title>EraseInstall application retired</title>
+      <link>/posts/2021/03/eraseinstall-application-retired/</link>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2020/12/getting-started-with-hugo/</guid>
-      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+      <guid>/posts/2021/03/eraseinstall-application-retired/</guid>
+      <description>It makes me very sad that the EraseInstall application has been retired.
+We built this tool three years ago, mostly because we wanted to learn how to build an app like this on macOS. We think it worked out well. We learned a lot, and are glad the application was useful to some.
+Since then, all the people involved in the EraseInstall Project have moved on to other jobs or other responsibilities.</description>
     </item>
     
     <item>
-      <title>(Hu)go Template Primer</title>
-      <link>/posts/2020/04/hugo-template-primer/</link>
-      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
+      <title>Off-boarding in a Modern Deployment | JNUC 2019</title>
+      <link>/posts/2019/11/off-boarding-in-a-modern-deployment-jnuc-2019/</link>
+      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2020/04/hugo-template-primer/</guid>
-      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
-This document is a brief primer on using Go templates.</description>
+      <guid>/posts/2019/11/off-boarding-in-a-modern-deployment-jnuc-2019/</guid>
+      <description>Imaging is dead. Secure Boot and the T2 system controller have changed the toolset available to Mac administrators. The new post-imaging world of Mojave requires new workflows. We learn about the role that &amp;lsquo;off-boarding&amp;rsquo; or the erase/install step has in the modern macOS deployment cycle. In this session, we will explore the startosinstall command in detail and learn about its uses and limitations. Finally, we will introduce a few workflows and tools (Erase&amp;amp;Install.</description>
     </item>
     
   </channel>

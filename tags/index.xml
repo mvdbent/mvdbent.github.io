@@ -47,54 +47,54 @@
     <item>
       <title>development</title>
       <link>/tags/development/</link>
-      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/development/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>eraseinstall</title>
+      <link>/tags/eraseinstall/</link>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/eraseinstall/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>swift</title>
       <link>/tags/swift/</link>
-      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/swift/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>go</title>
-      <link>/tags/go/</link>
-      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
+      <title>API</title>
+      <link>/tags/api/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/go/</guid>
+      <guid>/tags/api/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>golang</title>
-      <link>/tags/golang/</link>
-      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
+      <title>jnuc19</title>
+      <link>/tags/jnuc19/</link>
+      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/golang/</guid>
+      <guid>/tags/jnuc19/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>templates</title>
-      <link>/tags/templates/</link>
-      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
+      <title>automation</title>
+      <link>/tags/automation/</link>
+      <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/templates/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>themes</title>
-      <link>/tags/themes/</link>
-      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/themes/</guid>
+      <guid>/tags/automation/</guid>
       <description></description>
     </item>
     

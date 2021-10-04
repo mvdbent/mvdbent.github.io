@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>panel on AppleShare IT</title>
+    <link>/tags/panel/</link>
+    <description>Recent content in panel on AppleShare IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>mvdbent</copyright>
+    <lastBuildDate>Wed, 24 Oct 2018 00:00:00 +0000</lastBuildDate><atom:link href="/tags/panel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automation Panel | JNUC 2018</title>
+      <link>/posts/2018/10/automation-panel-jnuc-2018/</link>
+      <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2018/10/automation-panel-jnuc-2018/</guid>
+      <description>In this JNUC session, we talk through some of the details of automating various components of your Apple environment.
+How to automate your &amp;ldquo;favorite&amp;rdquo; workflows. Let’s face it — one of the main reasons many people come to the Jamf Nation User Conference (JNUC) is to automate the crap out of their environment and have it run like a well-oiled machine. In this panel, we talk through some of the details of automating various components of your Apple environment, including Jamf.</description>
+    </item>
+    
+  </channel>
+</rss>
