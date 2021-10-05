@@ -2,30 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jamf Pro on AppleShare IT</title>
+    
+    
+    
     <link>/tags/jamf-pro/</link>
     <description>Recent content in Jamf Pro on AppleShare IT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>mvdbent</copyright>
-    <lastBuildDate>Sun, 03 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/jamf-pro/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Powered by Hugo • Made with &amp;#10084; © 2021 • MvdBent</copyright>
+    <lastBuildDate>Sun, 03 Oct 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/jamf-pro/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>CIS-Script</title>
-      <link>/posts/2021/10/cis-script/</link>
+      <link>/post/cis-script/</link>
       <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2021/10/cis-script/</guid>
-      <description>This blog is about the CIS-Script
-#!/bin/zsh  export PATH=/usr/bin:/bin:/usr/sbin:/sbin #################################################################################################### #################################################################################################### # DESCRIPTION # This will upload CIS Benchmark Scoring CSV to the computer record #################################################################################################### #################################################################################################### if [ &amp;#34;$4&amp;#34; != &amp;#34;&amp;#34; ] &amp;amp;&amp;amp; [ &amp;#34;$basic_auth&amp;#34; == &amp;#34;&amp;#34; ]; then basic_auth=$4 else echo &amp;#34;basic_auth is unset, please insert base64-encoded credentials within Parameter 4 in Jamf Pro&amp;#34; exit 1 fi should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png Change your submodule to point to map gh-pages to public instead of _site (recommended).</description>
+      <guid>/post/cis-script/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          This CIS Script is build to report and remediate based on the your organisation score.
+While working with CIS Benchmarks (Remediation Scripts and/or Configuration Profiles) I felt this could be done better, faster and easier. The guys from the macOS Security Compliance Project did an amazing job automating the guidance and configuration profiles.
+          
+        
+        </description>
     </item>
     
     <item>
       <title>onAirScanner</title>
-      <link>/posts/2020/10/onairscanner/</link>
+      <link>/post/onairscanner/</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2020/10/onairscanner/</guid>
-      <description>SOURCE onAirScanner - GitHub While working from home, we all have a lot of meetings, and sometimes a family member or a roommate has no idea that you are in a meeting and they walk into the room without even a knock. Setting up a light to show when you are &amp;ldquo;ON AIR&amp;rdquo; or in a meeting is a great solution. There are several solutions out on the internet that can do this.</description>
+      <guid>/post/onairscanner/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          While working from home, we all have a lot of meetings, and sometimes a family member or a roommate has no idea that you are in a meeting and they walk into the room without even a knock. Setting up a light to show when you are &#34;ON AIR&#34; or in a meeting is a great solution.
+          
+        
+        </description>
     </item>
     
   </channel>

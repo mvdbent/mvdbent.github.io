@@ -2,19 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on AppleShare IT</title>
+    
+    
+    
     <link>/tags/</link>
     <description>Recent content in Tags on AppleShare IT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>mvdbent</copyright>
-    <lastBuildDate>Sun, 03 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Powered by Hugo • Made with &amp;#10084; © 2021 • MvdBent</copyright>
+    <lastBuildDate>Sun, 03 Oct 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
-      <title>CIS Benchmark</title>
-      <link>/tags/cis-benchmark/</link>
+      <title>Benchmark</title>
+      <link>/tags/benchmark/</link>
       <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/cis-benchmark/</guid>
-      <description></description>
+      <guid>/tags/benchmark/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>CIS</title>
+      <link>/tags/cis/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/cis/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          
+          
+        
+        </description>
     </item>
     
     <item>
@@ -23,7 +61,18 @@
       <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/jamf-pro/</guid>
-      <description></description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          
+          
+        
+        </description>
     </item>
     
     <item>
@@ -32,7 +81,38 @@
       <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/macos/</guid>
-      <description></description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Reporting</title>
+      <link>/tags/reporting/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/reporting/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          
+          
+        
+        </description>
     </item>
     
     <item>
@@ -41,7 +121,38 @@
       <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/security/</guid>
-      <description></description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Documnetation</title>
+      <link>/tags/documnetation/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/documnetation/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          
+          
+        
+        </description>
     </item>
     
     <item>
@@ -50,7 +161,18 @@
       <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/development/</guid>
-      <description></description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          
+          
+        
+        </description>
     </item>
     
     <item>
@@ -59,7 +181,18 @@
       <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/eraseinstall/</guid>
-      <description></description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          
+          
+        
+        </description>
     </item>
     
     <item>
@@ -68,34 +201,18 @@
       <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/swift/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>API</title>
-      <link>/tags/api/</link>
-      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/api/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>jnuc19</title>
-      <link>/tags/jnuc19/</link>
-      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/jnuc19/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>automation</title>
-      <link>/tags/automation/</link>
-      <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/automation/</guid>
-      <description></description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          
+          
+        
+        </description>
     </item>
     
   </channel>

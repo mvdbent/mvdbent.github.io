@@ -2,10 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on AppleShare IT</title>
+    
+    
+    
     <link>/categories/</link>
     <description>Recent content in Categories on AppleShare IT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>mvdbent</copyright><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Powered by Hugo • Made with &amp;#10084; © 2021 • MvdBent</copyright>
+    
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>
