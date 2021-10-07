@@ -1,0 +1,371 @@
+<!doctype html><html lang=en dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>onAirScanner | AppleShare IT</title>
+<meta name=keywords content="API,CIS Benchmark,macOS,Jamf Pro,WFH">
+<meta name=description content="While working from home, we all have a lot of meetings, and sometimes a family member or a roommate has no idea that you are in a meeting and they walk into the room without even a knock. Setting up a light to show when you are &ldquo;ON AIR&rdquo; or in a meeting is a great solution. There are several solutions out on the internet that can do this.">
+<meta name=author content>
+<link rel=canonical href=https://appleshare.it/posts/onairscanner/>
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw+W8mWdq36u97PLc=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://appleshare.it/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://appleshare.it/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://appleshare.it/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://appleshare.it/apple-touch-icon.png>
+<link rel=mask-icon href=https://appleshare.it/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.88.1">
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+</noscript><meta property="og:title" content="onAirScanner">
+<meta property="og:description" content="While working from home, we all have a lot of meetings, and sometimes a family member or a roommate has no idea that you are in a meeting and they walk into the room without even a knock. Setting up a light to show when you are &ldquo;ON AIR&rdquo; or in a meeting is a great solution. There are several solutions out on the internet that can do this.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://appleshare.it/posts/onairscanner/"><meta property="og:image" content="https://appleshare.it/papermod-cover.png"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2020-10-27T00:00:00+00:00">
+<meta property="article:modified_time" content="2020-10-27T00:00:00+00:00">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://appleshare.it/papermod-cover.png">
+<meta name=twitter:title content="onAirScanner">
+<meta name=twitter:description content="While working from home, we all have a lot of meetings, and sometimes a family member or a roommate has no idea that you are in a meeting and they walk into the room without even a knock. Setting up a light to show when you are &ldquo;ON AIR&rdquo; or in a meeting is a great solution. There are several solutions out on the internet that can do this.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://appleshare.it/posts/"},{"@type":"ListItem","position":2,"name":"onAirScanner","item":"https://appleshare.it/posts/onairscanner/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"onAirScanner","name":"onAirScanner","description":"While working from home, we all have a lot of meetings, and sometimes a family member or a roommate has no idea that you are in a meeting and they walk into the room without even a knock. Setting up a light to show when you are \u0026ldquo;ON AIR\u0026rdquo; or in a meeting is a great solution. There are several solutions out on the internet that can do this.","keywords":["API","CIS Benchmark","macOS","Jamf Pro","WFH"],"articleBody":"  While working from home, we all have a lot of meetings, and sometimes a family member or a roommate has no idea that you are in a meeting and they walk into the room without even a knock. Setting up a light to show when you are “ON AIR” or in a meeting is a great solution. There are several solutions out on the internet that can do this. Still, a lot of these solutions connect to your calendar via IFTTT or Zapier and then you need to create an action with homekit or homebridge to turn on a light with the colour red when in a meeting and green when it is safe to enter. Another straightforward way is to buy a button that turns a light on or off. (The trick is to try not to forget to push the button, I always forget)\nIn this case, I couldn’t connect my work calendar these 3rd party services or send a webhook event from an API, when a meeting has started or ended.\nAlso, another challenge is that I am using multiple meeting applications (Zoom, WebEx, Microsoft Teams, Slack, etc.), and each application has its way of doing things.\nThen when discussing with my manager and colleagues, I came up with an idea to have a script that monitors your mac for an active online meeting. When the camera and mic are on!! As in full active participation, not just listing in. Once a meeting found, it can then control the HueLights via API.\nSet up What i used for this setup:\n Philips Hue Bridge v2 Hue Bloom - Model: LLC011 Web Browser (Safari, Google Chrome) Text Editor (BBEdit, Coderunner) macOS Automator.app (located in /Applications)  Create a API user in Bridge link to source\nFirst we need to search for the Hue Bridge on your network. To lookup on your network use the following link: https://discovery.meethue.com/\nResult example:\n[{\"id\":\"001234ddse27c6be\",\"internalipaddress\":\"10.0.1.111\"}] Use the internal API Debugger to create an API User, go to https://10.0.1.111/debug/clip.html Change #internalipaddress into the internalipaddress you just found.\nWe the following command in the API Debugger tool, we are generating a API user. Fill in the info like below (you can use your own name) in the API Debugger and press the POST button.\nURL: /api Message Body: {\"devicetype\":\"my_hue_app#username\"} When you press the POST button you should get back an error message letting you know that you have to press the link button\nResult example:\n[ { \"error\": { \"type\": 101, \"address\": \"/\", \"description\": \"link button not pressed\" } } ] Now press the button on the bridge and then press the POST button again and you should get a success response like below.\nResult example:\n[ { \"success\": { \"username\": \"FIAqb-53KaLBVzXKscihomProgvhUkRko59TAuV\" } } ] We now have enabled an API user and now we can authenticate with the Hue Bridge for communication. Please write down the Hue API hash that you got.\nNow we can test with the following command:\nURL: https://10.0.1.111/api/FIAqb-53KaLBVzXKscihomProgvhUkRko59TAuV Message Body: When you press the GET button you should get back a list of devices that are connected to the bridge\n{ \"lights\": { \"1\": { \"state\": { \"on\": true, \"bri\": 254, \"hue\": 25600, \"sat\": 254, \"effect\": \"none\", \"xy\": [ 0.2151, 0.7106 ], \"alert\": \"lselect\", \"colormode\": \"xy\", \"mode\": \"homeautomation\", \"reachable\": true }, \"swupdate\": { \"state\": \"noupdates\", \"lastinstall\": \"2018-12-12T19:06:42\" }, \"type\": \"Color light\", \"name\": \"Hue bloom 1\", \"modelid\": \"LLC011\", \"manufacturername\": \"Signify Netherlands B.V.\", \"productname\": \"Hue bloom\", \"capabilities\": { \"certified\": true, \"control\": { \"mindimlevel\": 10000, \"maxlumen\": 120, \"colorgamuttype\": \"A\", \"colorgamut\": [ [ 0.704, 0.296 ], [ 0.2151, 0.7106 ], [ 0.138, 0.08 ] ] }, \"streaming\": { \"renderer\": true, \"proxy\": false } }, \"config\": { \"archetype\": \"huebloom\", \"function\": \"decorative\", \"direction\": \"upwards\", \"startup\": { \"mode\": \"safety\", \"configured\": true } }, \"uniqueid\": \"00:11:22:01:00:1c:4e:ec-0b\", \"swversion\": \"5.127.1.26581\" }, } } For testing we are going to use the light with the ID 1\nSecurely store Passwords into the macOS Keychain Why put cleartext passwords in scripts, when we can use the macOS Keychain to securely store this information for us.\nI added this easy way to the script, so we can have a placeholder for the password rather then leaking this password within the script.\nHow to After creating the API user with the API Debugger tool, we received the Hue API Hash. We are going to add the Hue API Hash into the macOS Keychain with the security command. For this command we are using -T to add an entry to the login keychain and add the security binary to “Always allow access by these applications:” list in the Access Control preferences.\nsecurity add-generic-password [-s service] [-a account] [-w password] -T [appPath] Usage: -s service Specify service name (required) -a account Specify account name (required) -w password Specify password to be added. Put at end of command to be prompted (recommended) -T appPath Specify an application which may access this item (multiple -T options are allowed) Example:\nsecurity add-generic-password -s hueAPIHash -a HUEAPI -w FIAqb-53KaLBVzXKscihomProgvhUkRko59TAuV -T /usr/bin/security Now we securely store the Hue API Hash into the macOS Keychain, and allowing the security binary to access this entry. We can use the security command to fetch the Hue API Hash.\nsecurity find-generic-password [-s service] -w Usage: -s service Match service string -w Display the password(only) for the item found We only need to provide the service name and ask for the password\nExample:\nsecurity find-generic-password -s \"hueAPIHash\" -w #RESULT FIAqb-53KaLBVzXKscihomProgvhUkRko59TAuV See the man page security in terminal for more options. man security\nNow we have all the info we need to fill in the Global variables in the script\n# Global variables hueBridge='10.0.1.111' #use your internal ipaddress hueApiHash=$(security find-generic-password -s \"hueAPIHash\" -w) #use your service name by [-s \"hueAPIHash\"] hueLight=\"1\" #use your light ID that you wanna use Scan for any Running Meetings The Challenge “How do we know when we are in a meeting” (even when we have turned off the Camera and/or mic)\nOur options are:\n We could look for running process, but this doesn’t mean you are in a meeting. Hook our calendar up to a 3rd party service (can’t do that)  The only thing that seems to be content and reliable is if there is an open connection.\nRunning lsof (List open files) command without any options will list all open files of your system that belongs to all active process. This process takes a while and you will get a full list of everything, but we don’t need all this information.\nWe are going to narrow this down to only internet related connections by adding -i to the command.\nExample\nlsof -i | grep zoom zoom.us 53231 mvdbent 26u IPv4 0x64763030ad598a1d 0t0 TCP 10.0.1.116:60144-ec2-3-235-72-248.compute-1.amazonaws.com:https (ESTABLISHED) zoom.us 53231 mvdbent 48u IPv4 0x64763030acb3165d 0t0 TCP 10.0.1.116:63973-ec2-52-202-62-196.compute-1.amazonaws.com:https (ESTABLISHED) zoom.us 53231 mvdbent 51u IPv4 0x64763030adc2b03d 0t0 TCP 10.0.1.116:55830-ec2-3-235-96-204.compute-1.amazonaws.com:https (ESTABLISHED) zoom.us 53231 mvdbent 56u IPv4 0x64763030a88c4c7d 0t0 TCP 10.0.1.116:63978-149.137.8.183:https (ESTABLISHED) We now add the following options to the lsof command:\n -a option ( can be used to ANDed the selections) -n (inhibits the conversion of network numbers to host names for network files) -P (inhibits the conversion of port numbers to port names for network files) We want to inhibit the output so lsof can give us results faster.  Example\nlsof -anP -i | grep zoom zoom.us 53231 mvdbent 26u IPv4 0x64763030ad598a1d 0t0 TCP 10.0.1.116:60144-3.235.72.248:https (ESTABLISHED) zoom.us 53231 mvdbent 48u IPv4 0x64763030acb3165d 0t0 TCP 10.0.1.116:63973-52.202.62.196:https (ESTABLISHED) zoom.us 53231 mvdbent 51u IPv4 0x64763030adc2b03d 0t0 TCP 10.0.1.116:55830-3.235.96.204:https (ESTABLISHED) zoom.us 53231 mvdbent 56u IPv4 0x64763030a88c4c7d 0t0 TCP 10.0.1.116:63978-149.137.8.183:https (ESTABLISHED) Now we found the active process that have a internet related connection, this still doesn’t mean that we are in a meeting. This means that the Zoom.us app is opend and logged in with your account. After starting a meeting in zoom, we got extra connections based on UDP added.\nExample\nlsof -anP -i | grep zoom zoom.us 53231 mvdbent 26u IPv4 0x64763030ad598a1d 0t0 TCP 10.0.1.116:60144-3.235.72.248:https (ESTABLISHED) zoom.us 53231 mvdbent 48u IPv4 0x64763030acb3165d 0t0 TCP 10.0.1.116:63973-52.202.62.196:https (ESTABLISHED) zoom.us 53231 mvdbent 51u IPv4 0x64763030adc2b03d 0t0 TCP 10.0.1.116:55830-3.235.96.204:https (ESTABLISHED) zoom.us 53231 mvdbent 56u IPv4 0x64763030a88c4c7d 0t0 TCP 10.0.1.116:63978-149.137.8.183:https (ESTABLISHED) zoom.us 53231 mvdbent 60u IPv4 0x64763030846e819d 0t0 UDP 10.0.1.116:63026 zoom.us 53231 mvdbent 61u IPv4 0x64763030846e8d3d 0t0 UDP 10.0.1.116:58615 zoom.us 53231 mvdbent 65u IPv4 0x64763030846e98dd 0t0 UDP *:53327 zoom.us 53231 mvdbent 67u IPv4 0x6476303084763a55 0t0 UDP *:55248 zoom.us 53231 mvdbent 68u IPv4 0x647630307bd37d3d 0t0 UDP *:53574 So i did a couple of test, ended the meeting, UDP connections where gone, started a new meeting, UDP connections are back turned. Turned off my Camera, then turned on, turned off the Microphone, and turned both off, the UDP connections where still there. Awesome No we now where to look for when it comes to Zoom.us.\nWe only need to list the network files with TCP state LISTEN, with the -sTCP:LISTEN option\nOptional: We can specifies the IP version, IPv4 or IPv6 by adding 4 or 6, in the script we specify IPv4.\nExample\nlsof -anP -i4 -sTCP:LISTEN | grep zoom zoom.us 53231 mvdbent 60u IPv4 0x64763030846e819d 0t0 UDP 10.0.1.116:63026 zoom.us 53231 mvdbent 61u IPv4 0x64763030846e8d3d 0t0 UDP 10.0.1.116:58615 zoom.us 53231 mvdbent 65u IPv4 0x64763030846e98dd 0t0 UDP *:53327 zoom.us 53231 mvdbent 67u IPv4 0x6476303084763a55 0t0 UDP *:55248 zoom.us 53231 mvdbent 68u IPv4 0x647630307bd37d3d 0t0 UDP *:53574 Usage: -a\tcauses list selection options to be ANDed, as described above. -n\tinhibits the conversion of network numbers to host names for network files. Inhibiting conversion may make lsof run faster. It is also useful when host name lookup is not working properly. -P\tinhibits the conversion of port numbers to port names for network files. Inhibiting the conversion may make lsof run a little faster. It is also useful when port name lookup is not working properly. -i selects the listing of files any of whose Internet address matches the address specified in i. If no address is specified, this option selects the listing of all Internet and x.25 (HP-UX) network files 46 specifies the IP version, IPv4 or IPv6 that applies to the following address. '6' may be be specified only if the UNIX dialect supports IPv6. If neither '4' nor '6' is specified, the following address applies to all IP versions. sTCP\tTo list only network files with TCP state LISTEN, use: -sTCP:LISTEN Fun fact is that beside of zoom.us, Microsoft Teams, Cisco WebEx, Slack and FaceTime is also using TCP state LISTEN. Only Microsoft Teams connected this to your localIP\nExample\nlsof -anP -i4 -sTCP:LISTEN | grep Microsoft | grep 10.0.1.116:'*' Microsoft 67439 mvdbent 45u IPv4 0x647644287bdb076d 0t0 UDP 10.0.1.116:50023 This script will look for zoom.us, Microsoft Teams, Cisco WebEx, Slack and FaceTime online sessions. Want to have\nCreate an Automator app that loops this script. Now we have a script that scans locally for any running meetings, so we need to create an easy way to start and stop this process.\nFor this version we will use the Apple Automator.app to create an application.\nCreate a New Document and choose type Application\n Add Action Run Shell Script Copy the contents of autorunscript.sh and paste this into the Run Shell Script input field. Add an other Action Loop. Change Ask to continue to Loop automatically and Stop after 480 Minutes (8 hours) Save the Application to your preferred location, you can add this to your Dock where you can easy start the App, or add the App to the Login Items to open automatically.  If you want to stop/quit the App, in the menubar click on on the spinning gear icon, behind the status, App name (Loop), you can click the X to quit the App.\nResources github.com/mvdbent/onAirScanner\n","wordCount":"1930","inLanguage":"en","datePublished":"2020-10-27T00:00:00Z","dateModified":"2020-10-27T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://appleshare.it/posts/onairscanner/"},"publisher":{"@type":"Organization","name":"AppleShare IT","logo":{"@type":"ImageObject","url":"https://appleshare.it/favicon.ico"}}}</script>
+</head>
+<body class=dark id=top>
+<script>localStorage.getItem("pref-theme")==="light"&&document.body.classList.remove('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://appleshare.it/ accesskey=h title="AppleShare IT (Alt + H)">AppleShare IT</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</span>
+</div>
+<ul id=menu>
+<li>
+<a href=https://appleshare.it/about title=About>
+<span>About</span>
+</a>
+</li>
+<li>
+<a href=https://appleshare.it/archives title=Archive>
+<span>Archive</span>
+</a>
+</li>
+<li>
+<a href=https://appleshare.it/posts title=Blog>
+<span>Blog</span>
+</a>
+</li>
+<li>
+<a href=https://appleshare.it/links/ title=Links>
+<span>Links</span>
+</a>
+</li>
+<li>
+<a href=https://appleshare.it/search/ title="Search (Alt + /)" accesskey=/>
+<span>Search</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=main>
+<article class=post-single>
+<header class=post-header>
+<h1 class=post-title>
+onAirScanner
+</h1>
+<div class=post-meta>October 27, 2020&nbsp;·&nbsp;10 min</a>
+</div>
+</header>
+<div class=post-content><figure class=align-center><a href=https://github.com/mvdbent/onAirScanner target=_blank>
+<img loading=lazy src="https://github.com/mvdbent/onAirScanner/blob/main/OnAir.png?raw=true#center" height=300> </a>
+</figure>
+<p><img loading=lazy src="https://img.shields.io/github/v/release/mvdbent/onAirScanner?style=flat-square" alt="GitHub release (latest by date)">
+</p>
+<p>While working from home, we all have a lot of meetings, and sometimes a family member or a roommate has no idea that you are in a meeting and they walk into the room without even a knock.
+Setting up a light to show when you are &ldquo;ON AIR&rdquo; or in a meeting is a great solution.
+There are several solutions out on the internet that can do this. Still, a lot of these solutions connect to your calendar via <a href=https://ifttt.com><em>IFTTT</em></a> or <a href=https://zapier.com/><em>Zapier</em></a> and then you need to create an action with homekit or homebridge to turn on a light with the colour red when in a meeting and green when it is safe to enter.
+Another straightforward way is to buy a button that turns a light on or off. (The trick is to try not to forget to push the button, I always forget)</p>
+<p>In this case, I couldn&rsquo;t connect my work calendar these 3rd party services or send a webhook event from an API, when a meeting has started or ended.</p>
+<p>Also, another challenge is that I am using multiple meeting applications (Zoom, WebEx, Microsoft Teams, Slack, etc.), and each application has its way of doing things.</p>
+<p>Then when discussing with my manager and colleagues, I came up with an idea to have a script that monitors your mac for an active online meeting. When the camera and mic are on!! As in full active participation, not just listing in.
+Once a meeting found, it can then control the HueLights via API.</p>
+<h3 id=set-up>Set up<a hidden class=anchor aria-hidden=true href=#set-up>#</a></h3>
+<p><em>What i used for this setup:</em></p>
+<ul>
+<li>Philips Hue Bridge v2</li>
+<li>Hue Bloom - Model: LLC011</li>
+<li>Web Browser <em>(Safari, Google Chrome)</em></li>
+<li>Text Editor <em>(BBEdit, Coderunner)</em></li>
+<li>macOS Automator.app <em>(located in /Applications)</em></li>
+</ul>
+<p><em>Create a API user in Bridge</em> <a href=https://developers.meethue.com/develop/get-started-2/>link to source</a></p>
+<p>First we need to search for the Hue Bridge on your network. To lookup on your network use the following link: <a href=https://discovery.meethue.com/>https://discovery.meethue.com/</a></p>
+<p><em>Result example:</em></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>[{&#34;id&#34;:&#34;001234ddse27c6be&#34;,&#34;internalipaddress&#34;:&#34;10.0.1.111&#34;}]
+</code></pre></div><p>Use the internal API Debugger to create an API User, go to https://10.0.1.111/debug/clip.html
+Change #internalipaddress into the internalipaddress you just found.</p>
+<p>We the following command in the API Debugger tool, we are generating a API user.
+Fill in the info like below (you can use your own name) in the API Debugger and press the <code>POST</code> button.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>URL: /api
+Message Body:
+{&#34;devicetype&#34;:&#34;my_hue_app#username&#34;}
+</code></pre></div><p>When you press the <code>POST</code> button you should get back an error message letting you know that you have to press the link button</p>
+<p><em>Result example:</em></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>[
+	{
+		<span style=color:#f92672>&#34;error&#34;</span>: {
+			<span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#ae81ff>101</span>,
+			<span style=color:#f92672>&#34;address&#34;</span>: <span style=color:#e6db74>&#34;/&#34;</span>,
+			<span style=color:#f92672>&#34;description&#34;</span>: <span style=color:#e6db74>&#34;link button not pressed&#34;</span>
+		}
+	}
+]
+</code></pre></div><p>Now press the button on the bridge and then press the <code>POST</code> button again and you should get a success response like below.</p>
+<p><em>Result example:</em></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>[
+	{
+		<span style=color:#f92672>&#34;success&#34;</span>: {
+			<span style=color:#f92672>&#34;username&#34;</span>: <span style=color:#e6db74>&#34;FIAqb-53KaLBVzXKscihomProgvhUkRko59TAuV&#34;</span>
+		}
+	}
+]
+</code></pre></div><p>We now have enabled an API user and now we can authenticate with the Hue Bridge for communication.
+Please write down the Hue API hash that you got.</p>
+<p>Now we can test with the following command:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>URL: https://10.0.1.111/api/FIAqb-53KaLBVzXKscihomProgvhUkRko59TAuV
+Message Body:
+</code></pre></div><p>When you press the <code>GET</code> button you should get back a list of devices that are connected to the bridge</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+	<span style=color:#f92672>&#34;lights&#34;</span>: {
+		<span style=color:#f92672>&#34;1&#34;</span>: {
+			<span style=color:#f92672>&#34;state&#34;</span>: {
+				<span style=color:#f92672>&#34;on&#34;</span>: <span style=color:#66d9ef>true</span>,
+				<span style=color:#f92672>&#34;bri&#34;</span>: <span style=color:#ae81ff>254</span>,
+				<span style=color:#f92672>&#34;hue&#34;</span>: <span style=color:#ae81ff>25600</span>,
+				<span style=color:#f92672>&#34;sat&#34;</span>: <span style=color:#ae81ff>254</span>,
+				<span style=color:#f92672>&#34;effect&#34;</span>: <span style=color:#e6db74>&#34;none&#34;</span>,
+				<span style=color:#f92672>&#34;xy&#34;</span>: [
+					<span style=color:#ae81ff>0.2151</span>,
+					<span style=color:#ae81ff>0.7106</span>
+				],
+				<span style=color:#f92672>&#34;alert&#34;</span>: <span style=color:#e6db74>&#34;lselect&#34;</span>,
+				<span style=color:#f92672>&#34;colormode&#34;</span>: <span style=color:#e6db74>&#34;xy&#34;</span>,
+				<span style=color:#f92672>&#34;mode&#34;</span>: <span style=color:#e6db74>&#34;homeautomation&#34;</span>,
+				<span style=color:#f92672>&#34;reachable&#34;</span>: <span style=color:#66d9ef>true</span>
+			},
+			<span style=color:#f92672>&#34;swupdate&#34;</span>: {
+				<span style=color:#f92672>&#34;state&#34;</span>: <span style=color:#e6db74>&#34;noupdates&#34;</span>,
+				<span style=color:#f92672>&#34;lastinstall&#34;</span>: <span style=color:#e6db74>&#34;2018-12-12T19:06:42&#34;</span>
+			},
+			<span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;Color light&#34;</span>,
+			<span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;Hue bloom 1&#34;</span>,
+			<span style=color:#f92672>&#34;modelid&#34;</span>: <span style=color:#e6db74>&#34;LLC011&#34;</span>,
+			<span style=color:#f92672>&#34;manufacturername&#34;</span>: <span style=color:#e6db74>&#34;Signify Netherlands B.V.&#34;</span>,
+			<span style=color:#f92672>&#34;productname&#34;</span>: <span style=color:#e6db74>&#34;Hue bloom&#34;</span>,
+			<span style=color:#f92672>&#34;capabilities&#34;</span>: {
+				<span style=color:#f92672>&#34;certified&#34;</span>: <span style=color:#66d9ef>true</span>,
+				<span style=color:#f92672>&#34;control&#34;</span>: {
+					<span style=color:#f92672>&#34;mindimlevel&#34;</span>: <span style=color:#ae81ff>10000</span>,
+					<span style=color:#f92672>&#34;maxlumen&#34;</span>: <span style=color:#ae81ff>120</span>,
+					<span style=color:#f92672>&#34;colorgamuttype&#34;</span>: <span style=color:#e6db74>&#34;A&#34;</span>,
+					<span style=color:#f92672>&#34;colorgamut&#34;</span>: [
+						[
+							<span style=color:#ae81ff>0.704</span>,
+							<span style=color:#ae81ff>0.296</span>
+						],
+						[
+							<span style=color:#ae81ff>0.2151</span>,
+							<span style=color:#ae81ff>0.7106</span>
+						],
+						[
+							<span style=color:#ae81ff>0.138</span>,
+							<span style=color:#ae81ff>0.08</span>
+						]
+					]
+				},
+				<span style=color:#f92672>&#34;streaming&#34;</span>: {
+					<span style=color:#f92672>&#34;renderer&#34;</span>: <span style=color:#66d9ef>true</span>,
+					<span style=color:#f92672>&#34;proxy&#34;</span>: <span style=color:#66d9ef>false</span>
+				}
+			},
+			<span style=color:#f92672>&#34;config&#34;</span>: {
+				<span style=color:#f92672>&#34;archetype&#34;</span>: <span style=color:#e6db74>&#34;huebloom&#34;</span>,
+				<span style=color:#f92672>&#34;function&#34;</span>: <span style=color:#e6db74>&#34;decorative&#34;</span>,
+				<span style=color:#f92672>&#34;direction&#34;</span>: <span style=color:#e6db74>&#34;upwards&#34;</span>,
+				<span style=color:#f92672>&#34;startup&#34;</span>: {
+					<span style=color:#f92672>&#34;mode&#34;</span>: <span style=color:#e6db74>&#34;safety&#34;</span>,
+					<span style=color:#f92672>&#34;configured&#34;</span>: <span style=color:#66d9ef>true</span>
+				}
+			},
+			<span style=color:#f92672>&#34;uniqueid&#34;</span>: <span style=color:#e6db74>&#34;00:11:22:01:00:1c:4e:ec-0b&#34;</span>,
+			<span style=color:#f92672>&#34;swversion&#34;</span>: <span style=color:#e6db74>&#34;5.127.1.26581&#34;</span>
+		},
+	}
+}
+</code></pre></div><p>For testing we are going to use the light with the <strong>ID</strong> <code>1</code></p>
+<h2 id=securely-store-passwords-into-the-macos-keychain>Securely store Passwords into the macOS Keychain<a hidden class=anchor aria-hidden=true href=#securely-store-passwords-into-the-macos-keychain>#</a></h2>
+<p>Why put cleartext passwords in scripts, when we can use the macOS Keychain to securely store this information for us.</p>
+<p>I added this easy way to the script, so we can have a placeholder for the password rather then leaking this password within the script.</p>
+<h3 id=how-to>How to<a hidden class=anchor aria-hidden=true href=#how-to>#</a></h3>
+<p>After creating the API user with the API Debugger tool, we received the Hue API Hash.
+We are going to add the Hue API Hash into the macOS Keychain with the <code>security</code> command.
+For this command we are using <code>-T</code> to add an entry to the login keychain and add the <code>security</code> binary to &ldquo;Always allow access by these applications:&rdquo; list in the Access Control preferences.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>security add-generic-password <span style=color:#f92672>[</span>-s service<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>-a account<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>-w password<span style=color:#f92672>]</span> -T <span style=color:#f92672>[</span>appPath<span style=color:#f92672>]</span>
+
+Usage: 
+-s service      Specify service name <span style=color:#f92672>(</span>required<span style=color:#f92672>)</span>
+-a account      Specify account name <span style=color:#f92672>(</span>required<span style=color:#f92672>)</span>
+-w password     Specify password to be added. Put at end of command to be prompted <span style=color:#f92672>(</span>recommended<span style=color:#f92672>)</span>
+-T appPath      Specify an application which may access this item <span style=color:#f92672>(</span>multiple -T options are allowed<span style=color:#f92672>)</span>
+</code></pre></div><p><em>Example:</em></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>security add-generic-password -s hueAPIHash -a HUEAPI -w FIAqb-53KaLBVzXKscihomProgvhUkRko59TAuV -T /usr/bin/security
+</code></pre></div><p>Now we securely store the Hue API Hash into the macOS Keychain, and allowing the <code>security</code> binary to access this entry.
+We can use the <code>security</code> command to fetch the Hue API Hash.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>security find-generic-password <span style=color:#f92672>[</span>-s service<span style=color:#f92672>]</span> -w 
+Usage:
+-s service      Match service string
+-w              Display the password<span style=color:#f92672>(</span>only<span style=color:#f92672>)</span> <span style=color:#66d9ef>for</span> the item found
+</code></pre></div><p>We only need to provide the service name and ask for the password</p>
+<p><em>Example:</em></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>security find-generic-password -s <span style=color:#e6db74>&#34;hueAPIHash&#34;</span> -w
+<span style=color:#75715e>#RESULT</span>
+FIAqb-53KaLBVzXKscihomProgvhUkRko59TAuV
+</code></pre></div><p>See the man page security in terminal for more options. <code>man security</code></p>
+<p>Now we have all the info we need to fill in the Global variables in the script</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># Global variables</span>
+hueBridge<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;10.0.1.111&#39;</span> <span style=color:#75715e>#use your internal ipaddress</span>
+hueApiHash<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>security find-generic-password -s <span style=color:#e6db74>&#34;hueAPIHash&#34;</span> -w<span style=color:#66d9ef>)</span> <span style=color:#75715e>#use your service name by [-s &#34;hueAPIHash&#34;]</span>
+hueLight<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;1&#34;</span> <span style=color:#75715e>#use your light ID that you wanna use</span>
+</code></pre></div><h2 id=scan-for-any-running-meetings>Scan for any Running Meetings<a hidden class=anchor aria-hidden=true href=#scan-for-any-running-meetings>#</a></h2>
+<h3 id=the-challenge>The Challenge<a hidden class=anchor aria-hidden=true href=#the-challenge>#</a></h3>
+<p><em>&ldquo;How do we know when we are in a meeting&rdquo;</em> (even when we have turned off the Camera and/or mic)</p>
+<p>Our options are:</p>
+<ul>
+<li>We could look for running process, but this doesn&rsquo;t mean you are in a meeting.</li>
+<li>Hook our calendar up to a 3rd party service (can&rsquo;t do that)</li>
+</ul>
+<p>The only thing that seems to be content and reliable is if there is an open connection.</p>
+<p>Running <code>lsof</code> (List open files) command without any options will list all open files of your system that belongs to all active process.
+This process takes a while and you will get a full list of everything, but we don&rsquo;t need all this information.</p>
+<p>We are going to narrow this down to only internet related connections by adding <code>-i</code> to the command.</p>
+<p><em>Example</em></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>lsof -i | grep zoom
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   26u  IPv4 0x64763030ad598a1d      0t0  TCP 10.0.1.116:60144-&gt;ec2-3-235-72-248.compute-1.amazonaws.com:https <span style=color:#f92672>(</span>ESTABLISHED<span style=color:#f92672>)</span>
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   48u  IPv4 0x64763030acb3165d      0t0  TCP 10.0.1.116:63973-&gt;ec2-52-202-62-196.compute-1.amazonaws.com:https <span style=color:#f92672>(</span>ESTABLISHED<span style=color:#f92672>)</span>
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   51u  IPv4 0x64763030adc2b03d      0t0  TCP 10.0.1.116:55830-&gt;ec2-3-235-96-204.compute-1.amazonaws.com:https <span style=color:#f92672>(</span>ESTABLISHED<span style=color:#f92672>)</span>
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   56u  IPv4 0x64763030a88c4c7d      0t0  TCP 10.0.1.116:63978-&gt;149.137.8.183:https <span style=color:#f92672>(</span>ESTABLISHED<span style=color:#f92672>)</span>
+</code></pre></div><p>We now add the following options to the <code>lsof</code> command:</p>
+<ul>
+<li><strong>-a</strong> option ( can be used to ANDed the selections)</li>
+<li><strong>-n</strong> (inhibits the conversion of network numbers to host names for network files)</li>
+<li><strong>-P</strong> (inhibits the conversion of port numbers to port names for network files)
+We want to inhibit the output so <code>lsof</code> can give us results <strong>faster</strong>.</li>
+</ul>
+<p><em>Example</em></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>lsof -anP -i | grep zoom
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   26u  IPv4 0x64763030ad598a1d      0t0  TCP 10.0.1.116:60144-&gt;3.235.72.248:https <span style=color:#f92672>(</span>ESTABLISHED<span style=color:#f92672>)</span>
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   48u  IPv4 0x64763030acb3165d      0t0  TCP 10.0.1.116:63973-&gt;52.202.62.196:https <span style=color:#f92672>(</span>ESTABLISHED<span style=color:#f92672>)</span>
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   51u  IPv4 0x64763030adc2b03d      0t0  TCP 10.0.1.116:55830-&gt;3.235.96.204:https <span style=color:#f92672>(</span>ESTABLISHED<span style=color:#f92672>)</span>
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   56u  IPv4 0x64763030a88c4c7d      0t0  TCP 10.0.1.116:63978-&gt;149.137.8.183:https <span style=color:#f92672>(</span>ESTABLISHED<span style=color:#f92672>)</span>
+</code></pre></div><p>Now we found the active process that have a internet related connection, this still doesn&rsquo;t mean that we are in a meeting.
+This means that the Zoom.us app is opend and logged in with your account.
+After starting a meeting in zoom, we got extra connections based on UDP added.</p>
+<p><em>Example</em></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>lsof -anP -i | grep zoom
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   26u  IPv4 0x64763030ad598a1d      0t0  TCP 10.0.1.116:60144-&gt;3.235.72.248:https <span style=color:#f92672>(</span>ESTABLISHED<span style=color:#f92672>)</span>
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   48u  IPv4 0x64763030acb3165d      0t0  TCP 10.0.1.116:63973-&gt;52.202.62.196:https <span style=color:#f92672>(</span>ESTABLISHED<span style=color:#f92672>)</span>
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   51u  IPv4 0x64763030adc2b03d      0t0  TCP 10.0.1.116:55830-&gt;3.235.96.204:https <span style=color:#f92672>(</span>ESTABLISHED<span style=color:#f92672>)</span>
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   56u  IPv4 0x64763030a88c4c7d      0t0  TCP 10.0.1.116:63978-&gt;149.137.8.183:https <span style=color:#f92672>(</span>ESTABLISHED<span style=color:#f92672>)</span>
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   60u  IPv4 0x64763030846e819d      0t0  UDP 10.0.1.116:63026
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   61u  IPv4 0x64763030846e8d3d      0t0  UDP 10.0.1.116:58615
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   65u  IPv4 0x64763030846e98dd      0t0  UDP *:53327
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   67u  IPv4 0x6476303084763a55      0t0  UDP *:55248
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   68u  IPv4 0x647630307bd37d3d      0t0  UDP *:53574
+</code></pre></div><p>So i did a couple of test, ended the meeting, UDP connections where gone, started a new meeting, UDP connections are back turned.
+Turned off my Camera, then turned on, turned off the Microphone, and turned both off, the UDP connections where still there. <em>Awesome</em> No we now where to look for when it comes to Zoom.us.</p>
+<p>We only need to list the network files with TCP state LISTEN, with the <code>-sTCP:LISTEN</code> option</p>
+<p>Optional: We can specifies the IP version, IPv4 or IPv6 by adding <code>4</code> or <code>6</code>, in the script we specify IPv4.</p>
+<p><em>Example</em></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>lsof -anP -i4 -sTCP:LISTEN | grep zoom
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   60u  IPv4 0x64763030846e819d      0t0  UDP 10.0.1.116:63026
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   61u  IPv4 0x64763030846e8d3d      0t0  UDP 10.0.1.116:58615
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   65u  IPv4 0x64763030846e98dd      0t0  UDP *:53327
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   67u  IPv4 0x6476303084763a55      0t0  UDP *:55248
+zoom.us   <span style=color:#ae81ff>53231</span> mvdbent   68u  IPv4 0x647630307bd37d3d      0t0  UDP *:53574
+
+Usage:
+		-a		causes list selection options to be ANDed, as described above.
+		
+		-n		inhibits the conversion of network numbers to host  names  <span style=color:#66d9ef>for</span>
+				network  files.   Inhibiting  conversion  may  make  lsof  run
+				faster.  It is also useful when host name lookup is not  working properly.
+				
+		-P		inhibits the conversion of port numbers to port names <span style=color:#66d9ef>for</span> network files.
+				Inhibiting  the  conversion may make lsof run a little faster. 
+				It is also useful when port name lookup is not working properly.
+
+		-i 		selects  the  listing  of  files any of whose Internet address 
+				matches the address specified in i.  If no address  is  specified, 
+				this option selects the listing of all Internet and x.25
+				<span style=color:#f92672>(</span>HP-UX<span style=color:#f92672>)</span> network files
+				
+		<span style=color:#ae81ff>46</span> 		specifies the IP version, IPv4 or IPv6 that applies to the following address.
+				<span style=color:#e6db74>&#39;6&#39;</span> may be be specified only <span style=color:#66d9ef>if</span> the UNIX dialect supports IPv6.
+				If neither <span style=color:#e6db74>&#39;4&#39;</span> nor <span style=color:#e6db74>&#39;6&#39;</span> is specified, the following address applies to all IP versions.
+				
+		sTCP	To list only network files with TCP state LISTEN, use: -sTCP:LISTEN
+</code></pre></div><p>Fun fact is that beside of zoom.us, Microsoft Teams, Cisco WebEx, Slack and FaceTime is also using TCP state LISTEN.
+Only Microsoft Teams connected this to your localIP</p>
+<p><em>Example</em></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>lsof -anP -i4 -sTCP:LISTEN | grep Microsoft | grep 10.0.1.116:<span style=color:#e6db74>&#39;*&#39;</span>
+Microsoft <span style=color:#ae81ff>67439</span> mvdbent   45u  IPv4 0x647644287bdb076d      0t0  UDP 10.0.1.116:50023
+</code></pre></div><p>This script will look for zoom.us, Microsoft Teams, Cisco WebEx, Slack and FaceTime online sessions.
+Want to have</p>
+<h2 id=create-an-automator-app-that-loops-this-script>Create an Automator app that loops this script.<a hidden class=anchor aria-hidden=true href=#create-an-automator-app-that-loops-this-script>#</a></h2>
+<p>Now we have a script that scans locally for any running meetings, so we need to create an easy way to start and stop this process.</p>
+<p>For this version we will use the <em>Apple Automator.app</em> to create an application.</p>
+<p>Create a <code>New Document</code> and choose type <code>Application</code></p>
+<ul>
+<li>Add Action <code>Run Shell Script</code></li>
+<li>Copy the contents of <code>autorunscript.sh</code> and paste this into the <code>Run Shell Script</code> input field.</li>
+<li>Add an other Action <code>Loop</code>.</li>
+<li>Change <code>Ask to continue</code> to <code>Loop automatically</code> and Stop after 480 Minutes (8 hours)</li>
+<li>Save the Application to your preferred location, you can add this to your <code>Dock</code> where you can easy start the App, or add the App to the <code>Login Items</code> to open automatically.</li>
+</ul>
+<p>If you want to stop/quit the App, in the menubar click on on the spinning gear icon, behind the status, App name (Loop), you can click the X to quit the App.</p>
+<h3 id=resources>Resources<a hidden class=anchor aria-hidden=true href=#resources>#</a></h3>
+<p><a href=https://github.com/mvdbent/onAirScanner><strong>github.com/mvdbent/onAirScanner</strong></a></p>
+</div>
+<footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://appleshare.it/tags/api/>API</a></li>
+<li><a href=https://appleshare.it/tags/cis-benchmark/>CIS Benchmark</a></li>
+<li><a href=https://appleshare.it/tags/macos/>macOS</a></li>
+<li><a href=https://appleshare.it/tags/jamf-pro/>Jamf Pro</a></li>
+<li><a href=https://appleshare.it/tags/wfh/>WFH</a></li>
+</ul>
+</footer>
+</article>
+</main>
+<footer class=footer>
+<span>&copy; 2021 <a href=https://appleshare.it/>AppleShare IT</a></span>
+<span>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+<script>document.querySelectorAll('pre > code').forEach(b=>{const c=b.parentNode.parentNode,a=document.createElement('button');a.classList.add('copy-code'),a.innerText='copy';function d(){a.innerText='copied!',setTimeout(()=>{a.innerText='copy'},2e3)}a.addEventListener('click',e=>{if('clipboard'in navigator){navigator.clipboard.writeText(b.textContent),d();return}const a=document.createRange();a.selectNodeContents(b);const c=window.getSelection();c.removeAllRanges(),c.addRange(a);try{document.execCommand('copy'),d()}catch(a){}c.removeRange(a)}),c.classList.contains("highlight")?c.appendChild(a):c.parentNode.firstChild==c||(b.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?b.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(a):b.parentNode.appendChild(a))})</script>
+</body>
+</html>
