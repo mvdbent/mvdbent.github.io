@@ -1,220 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>AppleShare IT</title>
-    
-    
-    
-    <link>/</link>
-    <description>Recent content on AppleShare IT</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Powered by Hugo • Made with &amp;#10084; © 2021 • MvdBent</copyright>
-    <lastBuildDate>Thu, 07 Oct 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Automating CIS Benchmark Reporting and Remediation | MacSysAdmin 2021</title>
-      <link>/post/macsysadminscis/</link>
-      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/post/macsysadminscis/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          I am so honoured to present at the online MacSysAdmin this year. My online presentation is about Automating CIS Benchmark with reporting and remediation. Learn about a better, faster, and easier way to report and remediate CIS Benchmarks
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>CIS-Script</title>
-      <link>/post/cis-script/</link>
-      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/post/cis-script/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          This CIS Script is build to report and remediate based on the your organisation score.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AppleShare IT</title><link>https://appleshare.it/</link><description>Recent content on AppleShare IT</description><image><url>https://appleshare.it/papermod-cover.png</url><link>https://appleshare.it/papermod-cover.png</link></image><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 07 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://appleshare.it/index.xml" rel="self" type="application/rss+xml"/><item><title>Automating CIS Benchmark Reporting and Remediation | MacSysAdmin 2021</title><link>https://appleshare.it/posts/macsysadminscis/</link><pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/macsysadminscis/</guid><description>I am so honoured to present at the online Mac Sys Admin this year.
+This presentation is about: Automating CIS Benchmark with reporting and remediation.
+Learn about a better, faster, and easier way to report and remediate CIS Benchmarks. We will introduce a new reporting script, with optional remediation. This script is designed for Big Sur and Monterey and has flexible deployment options for Jamf Pro.
+Presentation Video</description></item><item><title>CIS-Script</title><link>https://appleshare.it/posts/cis-script/</link><pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/cis-script/</guid><description>This CIS Script is build to report and remediate based on the your organisation score.
 While working with CIS Benchmarks (Remediation Scripts and/or Configuration Profiles) I felt this could be done better, faster and easier. The guys from the macOS Security Compliance Project did an amazing job automating the guidance and configuration profiles.
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>CIS Custom Rules Set mSCP</title>
-      <link>/post/cis-custom-rules-set-mscp/</link>
-      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/post/cis-custom-rules-set-mscp/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          While working with CIS Benchmarks PDF (guidelines for scripts and/or Configuration Profiles) I felt there must be a better and faster way. The guys from the macOS Security Compliance Project did an amazing job automating the guidance, needed scripts, configuration profiles, and remediation script.
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>EraseInstall application retired</title>
-      <link>/post/eraseinstall/</link>
-      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/post/eraseinstall/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          It makes me very sad that the [**EraseInstall application**](https://bitbucket.org/prowarehouse-nl/erase-install/) has been retired.
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>CIS-Reporting</title>
-      <link>/post/cis-reporting/</link>
-      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/post/cis-reporting/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          While i was working with Jamf&#39;s CIS Benchmark, Script and Configuration Profile Remediation tool ), I had the feeling there was missing a overview with compleet reporting. You can find some info by the device record in Jamf, however this was only for the Non-compliant items.
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>onAirScanner</title>
-      <link>/post/onairscanner/</link>
-      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/onairscanner/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          While working from home, we all have a lot of meetings, and sometimes a family member or a roommate has no idea that you are in a meeting and they walk into the room without even a knock. Setting up a light to show when you are &#34;ON AIR&#34; or in a meeting is a great solution.
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>The story of trust destroyed | JNUC 2020</title>
-      <link>/post/thestoryoftrustdestroyed/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/thestoryoftrustdestroyed/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          The truth about MDM Migration: Journey through time as Jamf consulting engineers Mischa van der Bent and Rob Potvin talk about the current design of the Apple MDM protocol and what the migration process looks like for moving existing devices from one MDM to another. This can be fairly difficult, but success is possible with a bit of time, effort and planning. It is not really migrating, but destroying trust.
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Securely Store Passwords</title>
-      <link>/post/securely-store-passwords/</link>
-      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/securely-store-passwords/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          Why put cleartext passwords in scripts, when we can use the macOS Keychain to securely store this information for us.
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Off-boarding in a Modern Deployment | JNUC 2019</title>
-      <link>/post/off-boarding/</link>
-      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/off-boarding/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          Imaging is dead. Secure Boot and the T2 system controller have changed the toolset available to Mac administrators. The new post-imaging world of Mojave requires new workflows.
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Automation Panel | JNUC 2018</title>
-      <link>/post/automationpanel/</link>
-      <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/automationpanel/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          In this JNUC session, we talk through some of the details of automating various components of your Apple environment.
-          
-        
-        </description>
-    </item>
-    
-  </channel>
-</rss>
+I created custom rules set for CIS Benchmark to integrate with the macOS Security Compliance Project and published CIS-macOS-Security.</description></item><item><title>CIS Custom Rules Set mSCP</title><link>https://appleshare.it/posts/cis-custom-rules-set-mscp/</link><pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/cis-custom-rules-set-mscp/</guid><description>While working with CIS Benchmarks PDF (guidelines for scripts and/or Configuration Profiles) I felt there must be a better and faster way. The guys from the macOS Security Compliance Project did an amazing job automating the guidance, needed scripts, configuration profiles, and remediation script.
+While working with CIS Benchmarks PDF (guidelines for scripts and/or Configuration Profiles) I felt there must be a better and faster way. The guys from the macOS Security Compliance Project did an amazing job automating the guidance, needed scripts, configuration profiles, and remediation script.</description></item><item><title>EraseInstall application retired</title><link>https://appleshare.it/posts/eraseinstall/</link><pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/eraseinstall/</guid><description>It makes me very sad that the EraseInstall application has been retired.
+We built this tool three years ago, mostly because we wanted to learn how to build an app like this on macOS. We think it worked out well. We learned a lot, and are glad the application was useful to some.
+Since then, all the people involved in the EraseInstall Project have moved on to other jobs or other responsibilities.</description></item><item><title>CIS-Reporting</title><link>https://appleshare.it/posts/cis-reporting/</link><pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/cis-reporting/</guid><description>github.com/mvdbent/CIS-Reporting
+While i was working with Jamf&amp;rsquo;s CIS Benchmark, Script and Configuration Profile Remediation tool, I had the feeling there was missing a overview with compleet reporting. You can find some info by the device record in Jamf, however this was only for the Non-compliant items.
+To expand the Jamf Proffessional Services CIS for macOS Catalina - Script and Configuration Profile Remediation, I created the 4_Security_Report.sh.
+Usage/Requirements This script is tested on macOS Big Sur 11.</description></item><item><title>onAirScanner</title><link>https://appleshare.it/posts/onairscanner/</link><pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/onairscanner/</guid><description>While working from home, we all have a lot of meetings, and sometimes a family member or a roommate has no idea that you are in a meeting and they walk into the room without even a knock. Setting up a light to show when you are &amp;ldquo;ON AIR&amp;rdquo; or in a meeting is a great solution. There are several solutions out on the internet that can do this.</description></item><item><title>The story of trust destroyed | JNUC 2020</title><link>https://appleshare.it/posts/thestoryoftrustdestroyed/</link><pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/thestoryoftrustdestroyed/</guid><description>The truth about MDM Migration: Journey through time as Jamf consulting engineer me and Rob Potvin will talk about the current design of the Apple MDM protocol and what the migration process looks like for moving existing devices from one MDM to another.
+This can be fairly difficult, but success is possible with a bit of time, effort and planning. It is not really migrating, but destroying trust.
+Presentation Video Tools ReEnroller</description></item><item><title>Securely Store Passwords</title><link>https://appleshare.it/posts/securely-store-passwords/</link><pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/securely-store-passwords/</guid><description>Securely store Passwords into the macOS Keychain Why put cleartext passwords in scripts, when we can use the macOS Keychain to securely store this information for us.
+How to have a easy way to include this into your scripts, so we can have a placeholder for the password rather then leaking this password within the script.
+How to We are going to add an PASSWORD into the macOS Keychain with the security command.</description></item><item><title>Off-boarding in a Modern Deployment | JNUC 2019</title><link>https://appleshare.it/posts/off-boarding/</link><pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/off-boarding/</guid><description>Imaging is dead. Secure Boot and the T2 system controller have changed the toolset available to Mac administrators. The new post-imaging world of Mojave requires new workflows. We learn about the role that &amp;lsquo;off-boarding&amp;rsquo; or the erase/install step has in the modern macOS deployment cycle. In this session, we will explore the startosinstall command in detail and learn about its uses and limitations. Finally, we will introduce a few workflows and tools (Erase&amp;amp;Install.</description></item><item><title>Markdown Syntax Guide</title><link>https://appleshare.it/posts/demo/markdown-syntax/</link><pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/demo/markdown-syntax/</guid><description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description></item><item><title>Rich Content</title><link>https://appleshare.it/posts/demo/rich-content/</link><pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/demo/rich-content/</guid><description>A brief description of Hugo Shortcodes</description></item><item><title>Placeholder Text</title><link>https://appleshare.it/posts/demo/placeholder-text/</link><pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/demo/placeholder-text/</guid><description>Lorem Ipsum Dolor Si Amet</description></item><item><title>Math Typesetting</title><link>https://appleshare.it/posts/demo/math-typesetting/</link><pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/demo/math-typesetting/</guid><description>A brief guide to setup KaTeX</description></item><item><title>Emoji Support</title><link>https://appleshare.it/posts/demo/emoji-support/</link><pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/demo/emoji-support/</guid><description>Guide to emoji usage in Hugo</description></item><item><title>Automation Panel | JNUC 2018</title><link>https://appleshare.it/posts/automationpanel/</link><pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/automationpanel/</guid><description>In this JNUC session, we talk through some of the details of automating various components of your Apple environment.</description></item><item><title>About the Author</title><link>https://appleshare.it/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://appleshare.it/about/</guid><description>Hi there,
+My name is Mischa van der Bent and this is my personal blog and mainly write about sharing my experience with Apple IT related matters and share what I think is interesting to share.
+Disclaimer: all posts, opinions, suggestions, remarks, information or statements of any kind, are my own. My current employer Jamf, or any other 3rd party mentioned in, or linked to, any part of this blog, can never be held responsible for the information on this website.</description></item><item><title>Links</title><link>https://appleshare.it/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://appleshare.it/links/</guid><description>I know there are tons of community resources, can&amp;rsquo;t list them all but here are some pages/people I follow and love ❤ that you could check.
+Books Apple Pro Training Series
+Books for Apple Administrators
+Hacking with macOS
+Podcasts Apple @ Work
+Command Control Power
+Jamf After Dark
+Mac Admins Podcast
+The History of Computing</description></item></channel></rss>
