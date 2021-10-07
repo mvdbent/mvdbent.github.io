@@ -1,6 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Reporting on AppleShare IT</title><link>https://appleshare.it/tags/reporting/</link><description>Recent content in Reporting on AppleShare IT</description><image><url>https://appleshare.it/papermod-cover.png</url><link>https://appleshare.it/papermod-cover.png</link></image><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sun, 03 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://appleshare.it/tags/reporting/index.xml" rel="self" type="application/rss+xml"/><item><title>CIS-Script</title><link>https://appleshare.it/posts/cis-script/</link><pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/cis-script/</guid><description>This CIS Script is build to report and remediate based on the your organisation score.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reporting on AppleShare IT</title>
+    
+    
+    
+    <link>/tags/reporting/</link>
+    <description>Recent content in Reporting on AppleShare IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by Hugo • Made with &amp;#10084; © 2021 • MvdBent</copyright>
+    <lastBuildDate>Sun, 03 Oct 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/reporting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CIS-Script</title>
+      <link>/post/cis-script/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/cis-script/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          This CIS Script is build to report and remediate based on the your organisation score.
 While working with CIS Benchmarks (Remediation Scripts and/or Configuration Profiles) I felt this could be done better, faster and easier. The guys from the macOS Security Compliance Project did an amazing job automating the guidance and configuration profiles.
-I created custom rules set for CIS Benchmark to integrate with the macOS Security Compliance Project and published CIS-macOS-Security.</description></item><item><title>CIS-Reporting</title><link>https://appleshare.it/posts/cis-reporting/</link><pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate><guid>https://appleshare.it/posts/cis-reporting/</guid><description>github.com/mvdbent/CIS-Reporting
-While i was working with Jamf&amp;rsquo;s CIS Benchmark, Script and Configuration Profile Remediation tool, I had the feeling there was missing a overview with compleet reporting. You can find some info by the device record in Jamf, however this was only for the Non-compliant items.
-To expand the Jamf Proffessional Services CIS for macOS Catalina - Script and Configuration Profile Remediation, I created the 4_Security_Report.sh.
-Usage/Requirements This script is tested on macOS Big Sur 11.</description></item></channel></rss>
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>CIS-Reporting</title>
+      <link>/post/cis-reporting/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/cis-reporting/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          While i was working with Jamf&#39;s CIS Benchmark, Script and Configuration Profile Remediation tool ), I had the feeling there was missing a overview with compleet reporting. You can find some info by the device record in Jamf, however this was only for the Non-compliant items.
+          
+        
+        </description>
+    </item>
+    
+  </channel>
+</rss>
